@@ -14,7 +14,7 @@ var orm = {
     })
   },
 
-  selectWhere: function(tableName) {
+  selectAll: function(tableName) {
     var queryString = "SELECT * FROM burgers WHERE id = 1 OR id = 2 OR id=3";
     console.log(queryString);
     connection.query(queryString, [tableName], function(err, result) {
@@ -27,5 +27,12 @@ var orm = {
   },
 };
 
+insertOne: function(tableName,columns,values,data)
+{var queryString = "INSERT INTO" + tableName;
+}
 
+updateOne: function(tableName, columns,values,data){
+  var queryString = "UPDATE" + tableName;
+}    
+   
 module.exports = orm;
